@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+
+% ───────────── Packages ─────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{natbib}
+
+% ───────────── Formatting ─────────────
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.5em}
+\onehalfspacing
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ───────────── Metadata ─────────────
+\title{\textbf{The Fractal Nature of an Entropically-Driven Society}\\ \large A Symbolic-Structural Hypothesis of Conscious Organisation}
+\author{Demetrios Chiuratto Agourakis}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+\textit{\textquotedblleft The universe is not only queerer than we imagine, it is queerer than we can imagine.\textquotedblright\ – J.B.S. Haldane}
+\end{center}
+\vspace{1em}
+
+\tableofcontents
+\newpage
+
+% ───────────── Core Sections ─────────────
+\section{Introduction — The Echo of Structure in the Invisible}
+\input{sections/section1_intro}
+
+\section{The Fundamental Concept of Fractals}
+\input{sections/section2_fractal_entropia_cognicao}
+
+\section{Entropy as a Vector of Organisation}
+\input{sections/section2_2_entropy}
+
+\section{Symbiotic Cognition in a Fractal Regime}
+\input{sections/section2_3_symbiotic_cognition}
+
+\section*{Intermezzo I — The Fractal Interrogation of Consciousness}
+\addcontentsline{toc}{section}{Intermezzo I — The Fractal Interrogation of Consciousness}
+\input{sections/intermezzo1_consciousness}
+
+\section{Recurring Patterns and the Impossible}
+\input{sections/section3_patterns_impossible}
+
+\section*{Intermezzo II — The Impossible as the Fractal Boundary of Consciousness}
+\addcontentsline{toc}{section}{Intermezzo II — The Impossible as the Fractal Boundary of Consciousness}
+\input{sections/intermezzo2_impossible}
+
+\section{Fractal Epiphany: Between Ecstasy and Exposure}
+\input{sections/section_epiphany}
+
+\section{Coda Fractal: The Cosmic Humility of Consciousness}
+\input{sections/section_coda_fractal}
+
+\section{Cognitive Singularity: Giftedness in a Fractal Society}
+\input{sections/section_singularity_giftedness}
+
+\section*{Epilogue — The Equation That Breathes}
+\addcontentsline{toc}{section}{Epilogue — The Equation That Breathes}
+\input{sections/epilogue_equation}
+
+% ───────────── Appendices ─────────────
+\newpage
+\input{sections/glossary}
+
+\newpage
+\section*{Appendix B — Visual Representations}
+\addcontentsline{toc}{section}{Appendix B — Visual Representations}
+\input{sections/symbolic_density}
+\input{sections/fractal_layers}
+
+% ───────────── References ─────────────
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
