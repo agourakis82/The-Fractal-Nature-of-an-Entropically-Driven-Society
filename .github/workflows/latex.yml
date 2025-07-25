@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # +++ add this +++
+      - name: Install ChkTeX
+        run: sudo apt-get update && sudo apt-get install -y chktex
+      # +++ end +++
+
       - name: Compile with XeLaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex      # keep this in sync
+          root_file: main.tex
           latexmk_use_xelatex: true
+
       - name: ChkTeX (British)
         run: chktex -q -l en_GB -n30 $(git ls-files '*.tex')
+
