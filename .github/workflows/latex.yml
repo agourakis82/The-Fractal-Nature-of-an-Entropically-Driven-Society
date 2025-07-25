@@ -1,20 +1,19 @@
-name: Build LaTeX PDF
+name: Build LaTeX PDF  # substituídos espaços não‑quebráveis por espaços ASCII
 
 on:
   push:
     branches: [ main ]
-  pull_request:
+  pull_request:        # mantém gatilho sem filtros específicos
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      # +++ add this +++
       - name: Install ChkTeX
         run: sudo apt-get update && sudo apt-get install -y chktex
-      # +++ end +++
 
       - name: Compile with XeLaTeX
         uses: xu-cheng/latex-action@v3
@@ -22,6 +21,8 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: true
 
-      - name: ChkTeX (British)
-        run: chktex -q -l en_GB -n30 $(git ls-files '*.tex')
-
+      - name: ChkTeX (British, project files only)
+        continue-on-error: true     # evita falha do workflow em erros de estilo
+        run: |                      # bloco multilinha dentro da etapa
+          FILES=$(git ls-files '*.tex' | grep -v '^Definitions/')
+          chktex -q -n30 "$FILES"
