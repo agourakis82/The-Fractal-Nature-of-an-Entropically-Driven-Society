@@ -76,7 +76,7 @@
 
 %% To choose the journal
 % All journals (website name, full name, short name, DOI abbreviation, and ISSN + choice of continuous page numbers) are defined in an extra file. 
-\input{Definitions/journalnames}
+\input{sections/journalnames}
 \DeclareOption{journal}{\ClassWarning{mdpi}{You used an invalid journal name or you have not specified the journal. The first option of the documentclass command specifies the journal. The word 'journal' should be replaced by one of the journal names specified in template.tex (in the comment 'Choose between the following MDPI journal').}} 
 
 %% To choose the type of manuscript
