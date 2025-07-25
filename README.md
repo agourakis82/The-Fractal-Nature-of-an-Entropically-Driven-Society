@@ -1,6 +1,6 @@
 # The Fractal Nature of an Entropically-Driven Society  
 *A Symbolic-Structural Hypothesis of Conscious Organisation*
-
+![LaTeX CI](https://github.com/agourakis82/The-Fractal-Nature-of-an-Entropically-Driven-Society/actions/workflows/latex.yml/badge.svg)
 Author: **Demetrios Chiuratto Agourakis**  
 Format: LaTeX (Overleaf + GitHub integrated)  
 Status: 🧠 In submission preparation (2025)

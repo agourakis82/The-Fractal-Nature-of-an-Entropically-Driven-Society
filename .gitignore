@@ -36,3 +36,10 @@ Thumbs.db
 
 # Overleaf metadata
 output.*
+
+# LaTeX intermediates
+*.aux *.bbl *.blg *.fls *.fdb_latexmk *.log *.out *.toc *.synctex.gz *.xdv
+# Editors
+.vscode/
+# Overleaf
+*.pdfsync
