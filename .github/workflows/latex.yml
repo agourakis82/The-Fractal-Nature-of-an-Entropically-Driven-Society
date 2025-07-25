@@ -1,0 +1,19 @@
+name: Build LaTeX PDF
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile with XeLaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex      # keep this in sync
+          latexmk_use_xelatex: true
+      - name: ChkTeX (British)
+        run: chktex -q -l en_GB -n30 $(git ls-files '*.tex')
